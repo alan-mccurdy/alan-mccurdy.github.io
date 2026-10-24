@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Tools - Redirigiendo...</title>
+  <script>
+    // GitHub Pages SPA redirect — saves the full path, then redirects to index.html
+    // BrowserRouter reads sessionStorage on load and restores the path
+    var repo = '/pdf-tools';
+    var loc = window.location;
+    var path = loc.pathname.replace(repo, '') + loc.search + loc.hash;
+    sessionStorage.setItem('spa-redirect', path);
+    loc.replace(repo + '/');
+  </script>
+</head>
+<body>
+  <p style="text-align:center;padding:4rem;color:#94a3b8;font-family:system-ui">Redirigiendo...</p>
+</body>
+</html>
